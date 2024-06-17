@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link href="./output.css" rel="stylesheet">
+    
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="p-5 sm:p-0 bg-main-green flex flex-col h-full justify-center ">
+      <div class="form-container mx-auto rounded-xl p-2">
+        
+        <form id="form" action="#" method="POST" class="bg-white p-4 mt-4 ms:mt-0 rounded-xl w-60">
+          <h2 class="text-xl font-bold tracking-tight text-gray-600 mb-6">
+            Contact Us
+          </h2>
+          <div class="md:flex gap-3">
+            <div class="flex-1">
+              <label
+                for="first-name"
+                class="text-sm leading-6"
+                >First name</label
+              >
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                autocomplete="given-name"
+                class=" w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+              <span class="error ">This field is required</span>
+            </div>
+            <div class="flex-1">
+              <label
+                for="last-name"
+                class="text-sm leading-6"
+                >Last name</label
+              >
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                autocomplete="given-name"
+                class=" w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+              <span class="error">This field is required</span>
+            </div>
+          </div>
+          <label
+            for="email"
+            class="text-sm leading-6"
+            >Email Address</label
+            >
+          <div class="mt-2.5">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+
+              class="w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <p class="error hidden">Please enter a valid email address</p>
+          </div>
+          
+          
+          <label class="text-sm leading-6" for="query">Query Type</label>
+          <div class="md:flex gap-3">
+            <div class="flex gap-3 flex-1 border py-2 px-4 rounded-md mb-3 md:mb-0 "><input id="query" type="radio" name="radio" value="1" class="align-middle">General Enquiry</input></div>
+            <div class="flex gap-3 flex-1 border py-2 px-4 rounded-md"><input id="query2" type="radio" name="radio" value="2" class="align-middle">Support Request</input></div>
+          </div>
+            <div class="error">Please select a query type</div>
+          
+          <label class=" text-sm leading-6" for="message">Message</label>
+          <input id="message" type="text" class="w-full sm:h-16 h-52 rounded-md border p-2 shadow-sm text-sm text-wrap"/>
+          <div class="error">This field is required</div>
+          <input id="checkbox" type="checkbox" class="mt-10"><label for="checkbox" class="ml-4 text-sm">I consent to being contacted by the team</label></input>
+
+          <div class="error mb-10">
+            To submit this form, please consent to being contacted
+          </div>
+          <button type="submit" class="bg-Green-600-medium text-white border w-full  rounded-md p-3">Submit</button>
+        </form>
+        <div class="message-active text-sm flex flex-col  bg-Grey-900-darker text-white p-3 rounded-xl mx-auto top-0 left-0 right-0 absolute w-80">
+          Message Sent! <span class="text-sm">Thanks for completing the form. We'll be in touch soon!</span>
+        </div>
+      </div>
+      
+    </main>    
+    
+  </body>
+  
+</html>
