@@ -16,6 +16,7 @@
     
 
     <title>Frontend Mentor | Contact form</title>
+    <script defer src="/src/javascript.js"></script>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -30,9 +31,9 @@
   </head>
   <body>
     <main class="p-5 sm:p-0 bg-main-green flex flex-col h-full justify-center ">
-      <div class="form-container mx-auto rounded-xl p-2">
+      <div class="form-container mx-auto ">
         
-        <form id="form" action="#" method="POST" class="bg-white p-4 mt-4 ms:mt-0 rounded-xl w-60">
+        <form id="form" action="#" method="POST" class="bg-white p-5 mt- ms:mt-0 rounded-xl ">
           <h2 class="text-xl font-bold tracking-tight text-gray-600 mb-6">
             Contact Us
           </h2>
@@ -79,32 +80,40 @@
               name="email"
               id="email"
               autocomplete="email"
-              required
+              
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
 
               class="w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-              <p class="error">Please enter a valid email address</p>
+              <span class="error">Please enter a valid email address</span>
           </div>
           
           
-          <label class="text-sm leading-6" for="query">Query Type</label>
-          <div class="md:flex gap-3">
-            <div class="flex gap-3 flex-1 border py-2 px-4 rounded-md mb-3 md:mb-0 "><input id="query" type="radio" name="radio" value="1" class="align-middle">General Enquiry</input></div>
-            <div class="flex gap-3 flex-1 border py-2 px-4 rounded-md"><input id="query2" type="radio" name="radio" value="2" class="align-middle">Support Request</input></div>
-          </div>
-            <div class="error">Please select a query type</div>
+          <label class="text-sm leading-6" for="query-group">Query Type</label>
+            <div id="query-group" class="md:flex gap-3">
+                <div class="flex gap-3 flex-1 border py-2 px-4 rounded-md mb-4 md:mb-0 ">
+                  <label for="query1" name="query" class="label gap-3"><input id="query1" type="radio" name="query" value="General Enquiry" class="">General Enquiry</input></label>
+                </div>
+                <div class="flex gap-3 flex-1 border py-2 px-4 rounded-md">
+                    <label for="query2" name="query" class="label gap-3"><input id="query2" type="radio" name="query" value="Support Request" class="">Support Request</input></label>
+                </div>
+            </div>
+            <span class="error">Please select a query type</span>
           
-          <label class=" text-sm leading-6" for="message">Message</label>
-          <input id="message" type="text" class="w-full sm:h-16 h-52 rounded-md border p-2 shadow-sm text-sm text-wrap"/>
-          <div class="error">This field is required</div>
-          <input id="checkbox" type="checkbox" class="mt-10"><label for="checkbox" class="ml-4 text-sm">I consent to being contacted by the team</label></input>
-
-          <div class="error mb-10">
-            To submit this form, please consent to being contacted
+          <div>
+            <label class="text-sm leading-6" for="message">Message</label>
+            <input id="message" type="text" class="w-full sm:h-16 h-52 rounded-md border px-2 shadow-sm"/>
+            <div class="error">This field is required</div>
+            <div class="flex gap-3 flex-1  py-2 px-4 rounded-md">
+              <label for="checkbox" name="checkbox" class="label gap-3 relative"><input id="checkbox" type="checkbox" name="checkbox" value="checkbox" class="">I accept terms and conditions</input><div class="error  translate-y-28">
+                To submit this form, please consent to being contacted
+              </div></label>
+              
+            </div>
+            
           </div>
           <button id="submitBtn" type="submit" class="bg-Green-600-medium text-white border w-full  rounded-md p-3">Submit</button>
         </form>
-        <div class="message-active text-sm flex flex-col  bg-Grey-900-darker text-white p-3 rounded-xl mx-auto top-0 left-0 right-0 absolute w-80">
+        <div id="success-msg" class="message-active text-sm flex flex-col  bg-Grey-900-darker text-white p-3 rounded-xl mx-auto top-0 left-0 right-0 absolute w-80">
           Message Sent! <span class="text-sm">Thanks for completing the form. We'll be in touch soon!</span>
         </div>
       </div>
@@ -112,5 +121,5 @@
     </main>    
     
   </body>
-  <script src="/src/javascript.js"></script>
+  
 </html>

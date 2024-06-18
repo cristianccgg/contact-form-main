@@ -22,14 +22,24 @@
 
 body {
   min-height: 100vh;
-  width: 100%;
+}
+
+main {
+  min-height: 100vh;
 }
 
 .error {
   color: var(--Red);
   font-size: 0.8rem;
+  visibility: hidden;
 }
 
 .message-active {
   visibility: hidden;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
